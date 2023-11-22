@@ -1,0 +1,25 @@
+@import "./config.scss";
+
+.login {
+    @include flex(start, start, 1.2rem, column);
+    max-width: 400px;
+    width: 400px;
+    & > * {
+        width: 100%;
+    }
+    & > h2 {
+        font-size: 28px;
+    }
+    form {
+        @include flex(start, start, 0.6rem, column);
+        & > * {
+            width: 100%;
+        }
+    }
+    .sign_up_text {
+        a {
+            font-weight: bold;
+            color: $ocean-green-500;
+        }
+    }
+}

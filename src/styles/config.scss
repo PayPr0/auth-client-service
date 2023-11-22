@@ -1,0 +1,42 @@
+// colors
+$ocean-green-50: #effaf5;
+$ocean-green-100: #d7f4e4;
+$ocean-green-200: #b3e7cd;
+$ocean-green-300: #81d4af;
+$ocean-green-400: #43af83;
+$ocean-green-500: #2a9f73;
+$ocean-green-600: #1b805d;
+$ocean-green-700: #16664c;
+$ocean-green-800: #14513d;
+$ocean-green-900: #114334;
+$ocean-green-950: #08261e;
+
+@mixin grid($col, $row, $gap) {
+    display: grid;
+    grid-template-columns: $col;
+    grid-auto-rows: $row;
+    gap: $gap;
+}
+
+@mixin flex($ai, $jc, $gap, $fld: false) {
+    display: flex;
+    align-items: $ai;
+    justify-content: $jc;
+    gap: $gap;
+
+    @if ($fld != false) {
+        flex-direction: $fld;
+    }
+}
+
+@mixin media($prefix, $size) {
+    @media (#{$prefix}-width: $size) {
+        @content;
+    }
+}
+
+@mixin media-h($prefix, $size) {
+    @media (#{$prefix}-height: $size) {
+        @content;
+    }
+}
