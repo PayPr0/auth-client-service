@@ -86,7 +86,7 @@ const Login = () => {
           </Button>
         </form>
         <div className={css.sign_up_text}>
-          Don't have an account? <Link href="?auth_mode=signup">Sign up</Link>
+          Don't have an account? <Link href="/?auth_mode=signup">Sign up</Link>
         </div>
       </div>
       <Snackbar

@@ -140,7 +140,7 @@ const Register = () => {
           </Button>
         </form>
         <div className={css.sign_up_text}>
-          Don't have an account? <Link href="?auth_mode=login">Sign in</Link>
+          Don't have an account? <Link href="/?auth_mode=login">Sign in</Link>
         </div>
       </div>
       <Snackbar

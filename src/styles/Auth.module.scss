@@ -114,13 +114,23 @@
             .left {
                 height: 100%;
                 overflow: visible;
-                &::before {
-                    left: unset;
-                    right: -3rem;
-                    width: 500px;
-                    height: 500px;
-                    opacity: 0.3;
+                .content_wrapper {
+                    display: none;
                 }
+                &::before {
+                    display: none;
+                }
+            }
+            &::before {
+                content: "";
+                width: 400px;
+                height: 400px;
+                position: absolute;
+                bottom: -2rem;
+                right: -5rem;
+                background: url(../assets/images/sm-bg.svg);
+                background-repeat: no-repeat;
+                opacity: 0.25;
             }
         }
         @include media(max, 550px) {
