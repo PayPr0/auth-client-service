@@ -121,16 +121,24 @@
                     display: none;
                 }
             }
-            &::before {
-                content: "";
-                width: 400px;
-                height: 400px;
-                position: absolute;
-                bottom: -2rem;
-                right: -5rem;
-                background: url(../assets/images/sm-bg.svg);
-                background-repeat: no-repeat;
-                opacity: 0.25;
+            .right {
+                position: relative;
+                overflow: hidden;
+                &::before {
+                    content: "";
+                    width: 400px;
+                    height: 400px;
+                    position: absolute;
+                    bottom: -2rem;
+                    right: -5rem;
+                    background: url(../assets/images/sm-bg.svg);
+                    background-repeat: no-repeat;
+                    opacity: 0.1;
+                    z-index: 0;
+                }
+                & > div {
+                    position: relative;
+                }
             }
         }
         @include media(max, 550px) {
